@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign-Up Form</title>
+        <link rel="stylesheet" type="text/css" href="../css/form-style.css"/>
+	</head>
+	<body>
+		<div class="container">
+		<div class="heading">
+			<h1>SIGN UP!!</h1>
+		</div>
+			<form action="../../index.html#plans" autocomplete="on">
+			<table>
+				<tr>
+					<th><label for="first-name">First Name</label></th>
+					<td><input type="text" name="first-name" id="first-name" placeholder="Enter First Name" required /></td>
+				</tr>
+				<tr>
+					<th><label for="last-name">Last name</label></th>
+					<td><input type="text" name="last-name" id="last-name" placeholder="Enter Last Name" required /></td>
+				</tr>
+				<tr>
+					<th><label for="email">Enter Email</label></th>
+					<td><input type="email" name="email" id="email" placeholder="example@gmail.com" required /></td>
+				</tr>
+				<tr>
+					<th><label for="password">Enter Password</label></th>
+					<td><input type="password" name="password" id="password" placeholder="Enter Password" required /></td>
+				</tr>
+				<tr>
+					<th><label for="re-password">Re-enter password</label></th>
+					<td><input type="password" name="re-password" id="re-password" placeholder="Re-enter Password" required /></td>
+				</tr>
+				<tr>
+					<th><label for="contact">Enter Mobile NO.</label></th>
+					<td><input type="text" name="contact" pattern="[0-9]{10}" placeholder="contact number" required></td>
+				</tr>
+				<tr>
+					<th><label for="gender">Select gender</label></th>
+					<td class="radio">
+						<input type="radio" name="gender" id="male" value="male" /><label for="male" checked>Male</label><br>
+						<input type="radio" name="gender" id="female" value="female" /><label for="female">Female</label><br>
+						<input type="radio" name="gender" id="others" value="others" /><label for="others">others</label><br>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="DOB">Date Of Birth</label></th>
+					<td><input type="date" name="date" id="date" /></td>
+				</tr>
+				<tr>
+					<th><label for="country">Select Country</label></th>
+					<td>
+						<select name="country">
+							<option value="india">India</option>
+							<option value="australia">Australia</option>
+							<option value="afghanistan">Afghanistan</option>
+							<option value="bangladesh">Bangladesh</option>
+							<option value="brazil">Brazil</option>
+							<option value="canada">Canada</option>
+							<option value="china">China</option>
+							<option value="denmark">Denmark</option>
+							<option value="england">England</option>
+							<option value="france">France</option>
+							<option value="japana">Japan</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+				<input type="submit" class="submit" value="Sign-Up!"/>
+		</form>
+        </div>
+	</body>
+		
+</html>

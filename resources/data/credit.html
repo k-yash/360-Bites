@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>credit-card</title>
+        <link rel="stylesheet" type="text/css" href="../css/credit-style.css"/>
+    </head>
+    <body>
+                <div class="checkout-panel">
+  <div class="panel-body">
+    <h2 class="title">Checkout here!</h2>
+ 
+    <div class="progress-bar">
+      <div class="step active"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+ 
+    <div class="payment-method">
+      <label for="card" class="method card">
+        <div class="card-logos">
+          <img src="../../new-images/visa_logo.png"/>
+          <img src="../../new-images/mastercard_logo.png"/>
+        </div>
+ 
+        <div class="radio-input">
+          <input id="card" type="radio" name="payment">
+            Pay <div class="fixed.price">FEES</div> with credit card
+        </div>
+      </label>
+ 
+      <label for="paypal" class="method paypal">
+        <img src="../../new-images/paypal_logo.png"/>
+        <div class="radio-input">
+          <input id="paypal" type="radio" name="payment">
+          Pay <div class="fixed.price">FEES</div> with PayPal
+        </div>
+      </label>
+    </div>
+ <form>
+    <div class="input-fields">
+      <div class="column-1">
+        <label for="cardholder">Name</label>
+        <input type="text" id="cardholder" required/>
+ 
+        <div class="small-inputs">
+          <div>
+            <label for="date">Valid date</label>
+            <input type="date" id="date" required/>
+          </div>
+ 
+          <div>
+            <label for="verification">CVV / CVC *</label>
+            <input type="password" id="verification" max="9999" min="1111"/>
+          </div>
+        </div>
+ 
+      </div>
+      <div class="column-2">
+        <label for="cardnumber">Card Number</label>
+        <input type="password" id="cardnumber" required/>
+ 
+        <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+      </div>
+    </div>
+      </form>
+  </div>
+ 
+  <div class="panel-footer">
+    <button type="submit" class="btn back-btn" onclick="openBack()">Back</button>
+    <button class="btn next-btn" onclick="openNext()">Next Step</button>
+  </div>
+</div>
+<script>
+       $(document).ready(function() {
+ 
+  $('.method').on('click', function() {
+    $('.method').removeClass('blue-border');
+    $(this).addClass('blue-border');
+  });
+ 
+})
+var $cardInput = $('.input-fields input');
+ 
+$('.next-btn').on('click', function(e) {
+ 
+  $cardInput.removeClass('warning');
+ 
+  $cardInput.each(function() {    
+     var $this = $(this);
+     if (!$this.val()) {
+       $this.addClass('warning');
+     }
+  })
+}); 
+ function openNext()
+    {
+       window.location.assign('../../thanks/thank_you.html');
+    }
+function openBack()
+    {
+        window.location.assign('../../index.html');
+    }
+</script>
+    </body>
+</html>
